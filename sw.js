@@ -2,16 +2,16 @@ const cacheName = 'piac-pwa-v1';
 // Lista plików, które chcemy zapisać na start (Krok 5)
 
 const filesToCache = [
-    '/',
-    '/index.html',
-    '/composers.html',
-    '/style.css',
-    '/js/main.js',
-    '/images/apple-icon-180.png',
-    '/images/apple-splash-640-1136.jpg',
-    '/images/apple-splash-750-1334.jpg',
-    '/images/apple-splash-828-1792.jpg',
-    '/images/apple-splash-1125-2436.jpg'
+    '',
+    'index.html',
+    'composers.html',
+    'style.css',
+    'js/main.js',
+    'images/apple-icon-180.png',
+    'images/apple-splash-640-1136.jpg',
+    'images/apple-splash-750-1334.jpg',
+    'images/apple-splash-828-1792.jpg',
+    'images/apple-splash-1125-2436.jpg'
 ];
 
 // 1. Instalacja: Zapisujemy podstawowe pliki w pamięci (Krok 5)

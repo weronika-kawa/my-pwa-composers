@@ -2,7 +2,7 @@
     "name": "Wirtuozi Historii Muzyki",
     "short_name": "PWA",
     "lang": "en-US",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#db4938",
