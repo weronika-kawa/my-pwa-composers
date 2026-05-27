@@ -1,0 +1,128 @@
+:root {
+    --bg-color: #1a1a1a;
+    --text-color: #f4f4f4;
+    --accent-color: #d4af37;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('images/hero-bg.jpeg') no-repeat center center/cover;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.btn-primary {
+    padding: 15px 35px;
+    background-color: var(--accent-color);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+/* GALLERY PAGE */
+.gallery-header {
+    padding: 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.back-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.composer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+}
+
+.card-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: sepia(30%);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.years {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
