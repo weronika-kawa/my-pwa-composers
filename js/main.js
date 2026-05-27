@@ -40,3 +40,27 @@ function showTestNotification() {
 
 // Wywołajmy prośbę o powiadomienia po 5 sekundach od wejścia na stronę
 setTimeout(requestNotificationPermission, 5000);
+
+// Funkcja, która wysyła powiadomienie z konkretną treścią
+function sendDynamicNotification(title, message) {
+    if (Notification.permission === 'granted') {
+        navigator.serviceWorker.ready.then(registration => {
+            registration.showNotification(title, {
+                body: message,
+                icon: 'images/apple-icon-180.png',
+                vibrate: [100, 50, 100],
+                badge: 'images/apple-icon-180.png'
+            });
+        });
+    }
+}
+
+// Przykład: Powiadomienie powitalne po 5 sekundach
+setTimeout(() => {
+    sendDynamicNotification('Wirtuozi Historii', 'Czy wiesz, że Bach miał 20 dzieci? Odkryj więcej ciekawostek!');
+}, 5000);
+
+// Przykład: Powiadomienie przy próbie wyjścia (jeśli mysz opuści okno przeglądarki)
+document.addEventListener('mouseleave', () => {
+    sendDynamicNotification('Nie odchodź!', 'Mistrzowie mają jeszcze wiele do opowiedzenia.');
+});
